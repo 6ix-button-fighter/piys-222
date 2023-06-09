@@ -2,16 +2,15 @@
 
 namespace Database\Seeders;
 
+use App\Models\Categories;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
-class DatabaseSeeder extends Seeder
+class CategoriesSeeder extends Seeder
 {
-
-    
     public function run()
     {
-        $this->call(ProductSeeder::class);
-        $this->call(CategoriesSeeder::class);
+        Categories::factory(100)->create();
     }
 }
