@@ -4,6 +4,9 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Console\Commands\GetCategoryCodeCommand;
+use App\Console\Commands\ShowCategoryProductsCommand;
+use App\Console\Commands\ShowProductsCommand;
 
 class Kernel extends ConsoleKernel
 {
@@ -29,4 +32,19 @@ class Kernel extends ConsoleKernel
 
         require base_path('routes/console.php');
     }
+
+    protected $commands = [
+        // Другие команды
+        Commands\ShowCategoryProductsCommand::class,
+    ];
+
+    protected $commands = [
+        // Другие команды
+        Commands\GetCategoryCodeCommand::class,
+    ];
+
+    protected $commands = [
+        // Другие команды
+        Commands\ShowProductCommand::class,
+    ];
 }
